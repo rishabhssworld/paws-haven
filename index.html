@@ -55,5 +55,70 @@
         <button type="submit">Search</button>
     </form>
 
+    <section id="apply">
+      <h2>Adoption application</h2>
+      <p>Tell us a little about yourself and the pet you have your eye on. A volunteer will be in touch within three days.</p>
+      <form action="/applications" method="post">
+
+        <fieldset>
+          <legend>About you</legend>
+          <p>
+            <label for="full-name">Full name</label>
+            <input type="text" id="full-name" name="fullName" required>
+          </p>
+          <p>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required>
+          </p>
+          <p>
+            <label for="age">Your age (adopters must be 18 or older)</label>
+            <input type="number" id="age" name="age" min="18" max="120" required>
+          </p>
+          <p>
+            <label for="password">Choose a password for your adopter account</label>
+            <input type="password" id="password" name="password" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your new friend</legend>
+          <p>
+            <label for="pet-choice">Which pet are you interested in?</label>
+            <select id="pet-choice" name="pet" required>
+              <option value="">-- Choose a pet --</option>
+              <option value="biscuit">Biscuit (dog)</option>
+              <option value="mochi">Mochi (cat)</option>
+              <option value="clover">Clover (rabbit)</option>
+              <option value="pepper">Pepper (parrot)</option>
+              <option value="undecided">I am not sure yet</option>
+            </select>
+          </p>
+          <p>
+            <label for="visit-date">Preferred home-visit date</label>
+            <input type="date" id="visit-date" name="visitDate">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Where would your pet live?</legend>
+          <p>
+            <input type="radio" id="home-house" name="homeType" value="house" required>
+            <label for="home-house">House</label>
+          </p>
+          <!-- your turn: two more radios -->
+        </fieldset>
+
+        <p>
+          <label for="reason">Why would you be a great match?</label>
+          <textarea id="reason" name="reason" rows="5" cols="40" placeholder="e.g., I work from home and love long walks"></textarea>
+        </p>
+        <p>
+          <input type="checkbox" id="agree" name="agreeToVisit" value="yes" required>
+          <label for="agree">I agree to a home visit before the adoption is finalized</label>
+        </p>
+        <button type="submit">Send application</button>
+        </form>
+    </section>
+
 </body>
 </html>
