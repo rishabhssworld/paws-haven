@@ -3,15 +3,12 @@
 }
 
 :root {
-  --color-bg: #f5f5f5;
-  --color-surface: #ffffff;
-  --color-text: #222222;
-  --color-primary: #222222;
-  --color-accent: #2e5395;
-  --color-accent-dark: #1f3a6b;
-  --color-border: #cccccc;
-  --spacing-unit: 1rem;
-  --radius: 0.5rem;
+  --color-bg: #fbf7f0; /* was #f5f5f5 */
+  --color-primary: #1d6f6a; /* was #222222 */
+  --color-accent: #b5470f; /* was #2e5395 */
+  --color-accent-dark: #8f3809; /* was #1f3a6b */
+  --color-border: #e3dccd; /* was #cccccc */
+  --color-text: #2a2a2a; /* was #222222 */
 }
 
 body {
@@ -25,6 +22,15 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  h1,
+  h2,
+  h3 {
+    color: var(--color-primary);
+  }
+
+  a {
+    color: var(--color-primary);
+  }
 }
 
 header {
