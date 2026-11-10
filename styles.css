@@ -21,7 +21,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
 }
@@ -44,7 +44,7 @@ nav a {
 main {
   max-width: 70rem;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 
 section {
@@ -103,13 +103,31 @@ button:hover {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
 .showcase {
   display: grid;
-  grid-template-columns: 2fr 1fr;
   gap: 2rem;
-  align-items: start;
+}
+
+@media (min-width: 768px) {
+  header,
+  main,
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .pet-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .showcase {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
 }
