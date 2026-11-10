@@ -16,6 +16,11 @@ img {
 }
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   padding: 1rem 2rem;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
@@ -25,8 +30,13 @@ header img {
   width: 4rem;
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
 nav a {
-  margin-left: 1.5rem;
   text-decoration: none;
   color: #222;
 }
@@ -78,4 +88,12 @@ button:hover {
 .active {
   color: #2e5395;
   border-bottom: 2px solid #2e5395;
+}
+
+#pets form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
