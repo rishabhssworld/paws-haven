@@ -1,7 +1,7 @@
 /* Northern Paws Rescue — volunteers.css */
 
 body {
-  margin: 0
+  margin: 0;
   background-color: #f5f5f5;
   color: #222;
   line-height: 1.6;
@@ -58,10 +58,14 @@ main {
 }
 
 footer {
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: #222;
   color: #fff;
   text-align: center;
+}
+
+footer a {
+  color: #fff;
 }
 
 @media (min-width: 768px) {
