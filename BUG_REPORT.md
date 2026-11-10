@@ -16,3 +16,5 @@ HTML Bugs and Fixes
 9 Phone input The phone input did not have a properly associated label. No Added a <label> associated with the phone input.
 10 Top-bar element A generic <div> was used for the page header. No Replaced the container with a semantic <header> element.
 11 Bottom-bar element A generic <div> was used for the page footer. No Replaced the container with a semantic <footer>
+12<head>The viewport meta tag was missing, which could affect mobile layout.No Added <meta name="viewport" content="width=device-width, initial-scale=1.0" />.
+13<nav>The navigation element did not have an accessible name. No Added aria-label="Main navigation".14n Volunteer roles list The first list item contained an unnecessary <span> element. No Removed the extra <span> while keeping the list text.

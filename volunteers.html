@@ -2,16 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Volunteer — Northern Paws Rescue</title>
   </head>
   <body>
-    <div id="top-bar">
+    <header id="top-bar">
       <img src="images/logo.png" alt="Northern Paws Rescue Logo" />
-      <nav>
+      <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="faq.html">FAQ</a>
       </nav>
-    </div>
+    </header>
 
     <main>
       <h1>Volunteer with us</h1>
@@ -19,7 +20,7 @@
       <section id="roles">
         <h2>What volunteers do</h2>
         <ul>
-          <li><span>Walk the dogs</span></li>
+          <li>Walk the dogs</li>
           <li>Cuddle the cats</li>
           <li>Help out on Adoption Day</li>
         </ul>
@@ -35,21 +36,30 @@
 
       <section id="signup">
         <h2>Sign up to volunteer</h2>
+
         <form action="/volunteers" method="post" id="volunteer-form">
           <p>
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required />
           </p>
+
           <p>
-            <input type="text" name="phone" placeholder="Phone number" />
+            <label for="phone">Phone number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone number"
+            />
           </p>
+
           <button type="submit">Sign me up</button>
         </form>
       </section>
     </main>
 
-    <div id="bottom-bar">
+    <footer id="bottom-bar">
       <p>&copy; 2026 Northern Paws Rescue, Sudbury, Ontario.</p>
-    </div>
+    </footer>
   </body>
 </html>
