@@ -9,6 +9,8 @@
   --color-accent-dark: #8f3809; /* was #1f3a6b */
   --color-border: #e3dccd; /* was #cccccc */
   --color-text: #2a2a2a; /* was #222222 */
+  --font-heading: "Fredoka", "Trebuchet MS", sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
@@ -17,6 +19,7 @@ body {
   color: var(--color-text);
   font-size: var(--spacing-unit);
   line-height: 1.6;
+  font-family: var(--font-body);
 }
 
 img {
@@ -25,11 +28,22 @@ img {
   h1,
   h2,
   h3 {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-heading);
+    line-height: 1.2;
     color: var(--color-primary);
   }
 
-  a {
-    color: var(--color-primary);
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
   }
 }
 
@@ -75,6 +89,13 @@ fieldset {
   border: 1px solid var(--color-border);
 }
 
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
 textarea {
   width: 100%;
 }
@@ -113,6 +134,14 @@ textarea {
     padding-left: 2rem;
     padding-right: 2rem;
     text-color: var(--color-bg);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
   }
 
   .pet-list {
