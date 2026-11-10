@@ -11,7 +11,7 @@
       <img src="images/logo.png" alt="Northern Paws Rescue Logo" />
       <nav>
         <a href="index.html" class="active">Home</a>
-        <a href="#pets">Meet the pets</a>
+        <a href="#pets" class="btn">Meet the pets</a>
         <a href="#apply">Apply</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -33,12 +33,12 @@
           <form action="index.html#pets" method="get">
             <label for="pet-search">Search by name</label>
             <input type="text" id="pet-search" name="q" />
-            <button type="submit">Search</button>
+            <button type="submit" class="btn">Search</button>
           </form>
           <img src="images/paw-divider.png" alt="Paw print divider" />
           <ul class="pet-list">
             <li>
-              <article>
+              <article class="card">
                 <h3>Biscuit</h3>
                 <img src="images/biscuit.png" alt="Biscuit, a friendly dog" />
                 <p>
@@ -48,7 +48,7 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="card">
                 <h3>Mochi</h3>
                 <img src="images/mochi.png" alt="Mochi, a curious cat" />
                 <p>
@@ -58,7 +58,7 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="card">
                 <h3>Clover</h3>
                 <img src="images/clover.png" alt="Clover, a playful rabbit" />
                 <p>
@@ -68,7 +68,7 @@
               </article>
             </li>
             <li>
-              <article>
+              <article class="card">
                 <h3>Pepper</h3>
                 <img src="images/pepper.png" alt="Pepper, a talkative parrot" />
                 <p>
@@ -79,7 +79,7 @@
             </li>
           </ul>
         </section>
-        <aside>
+        <aside class="card">
           <h2>Pet of the Week</h2>
           <img
             src="images/biscuit.png"
@@ -167,7 +167,7 @@
               I agree to a home visit before the adoption is finalized
             </label>
           </p>
-          <button type="submit">Send application</button>
+          <button type="submit" class="btn">Send application</button>
         </form>
       </section>
     </main>
