@@ -1,65 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Volunteer — Northern Paws Rescue</title>
-  </head>
-  <body>
-    <header id="top-bar">
-      <img src="images/logo.png" alt="Northern Paws Rescue Logo" />
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="faq.html">FAQ</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>Volunteer — Northern Paws Rescue</title>
+  <link rel="stylesheet" href="volunteers.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Northern Paws Rescue logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
 
-    <main>
-      <h1>Volunteer with us</h1>
+  <main>
+    <h1>Volunteer with us</h1>
 
+    <div class="columns">
       <section id="roles">
         <h2>What volunteers do</h2>
         <ul>
           <li>Walk the dogs</li>
           <li>Cuddle the cats</li>
-          <li>Help out on Adoption Day</li>
+          <li class="highlight">Help out on Adoption Day</li>
         </ul>
       </section>
 
       <section id="why">
         <h2>Why we need you</h2>
+        <p>Every walk, cuddle and clean cage means one more animal ready for a home.</p>
+      </section>
+    </div>
+
+    <section id="signup">
+      <h2>Sign up to volunteer</h2>
+      <form action="/volunteers" method="post">
         <p>
-          Every walk, cuddle and clean cage means one more animal ready for a
-          home.
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
         </p>
-      </section>
+        <p>
+          <label for="phone">Phone number</label>
+          <input type="text" id="phone" name="phone">
+        </p>
+        <button type="submit">Sign me up</button>
+      </form>
+    </section>
+  </main>
 
-      <section id="signup">
-        <h2>Sign up to volunteer</h2>
-
-        <form action="/volunteers" method="post" id="volunteer-form">
-          <p>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </p>
-
-          <p>
-            <label for="phone">Phone number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Phone number"
-            />
-          </p>
-
-          <button type="submit">Sign me up</button>
-        </form>
-      </section>
-    </main>
-
-    <footer id="bottom-bar">
-      <p>&copy; 2026 Northern Paws Rescue, Sudbury, Ontario.</p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; 2026 Northern Paws Rescue, Sudbury, Ontario.</p>
+  </footer>
+</body>
 </html>
