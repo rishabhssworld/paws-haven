@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header>
       <img src="images/logo.png" alt="Northern Paws Rescue Logo" />
@@ -33,15 +34,19 @@
         </p>
         <a href="#pets">Meet the pets</a>
       </section>
+
       <div class="showcase">
         <section id="pets">
           <h2>Meet the pets</h2>
+
           <form action="index.html#pets" method="get">
             <label for="pet-search">Search by name</label>
             <input type="text" id="pet-search" name="q" />
             <button type="submit" class="btn">Search</button>
           </form>
+
           <img src="images/paw-divider.png" alt="Paw print divider" />
+
           <ul class="pet-list">
             <li>
               <article class="card">
@@ -53,6 +58,7 @@
                 </p>
               </article>
             </li>
+
             <li>
               <article class="card">
                 <h3>Mochi</h3>
@@ -63,6 +69,7 @@
                 </p>
               </article>
             </li>
+
             <li>
               <article class="card">
                 <h3>Clover</h3>
@@ -73,6 +80,7 @@
                 </p>
               </article>
             </li>
+
             <li>
               <article class="card">
                 <h3>Pepper</h3>
@@ -85,6 +93,7 @@
             </li>
           </ul>
         </section>
+
         <aside class="card">
           <h2>Pet of the Week</h2>
           <img
@@ -98,23 +107,28 @@
           </p>
         </aside>
       </div>
+
       <section id="apply">
         <h2>Adoption application</h2>
         <p>
           Tell us a little about yourself and the pet you have your eye on. A
           volunteer will be in touch within three days.
         </p>
+
         <form action="/applications" method="post">
           <fieldset>
             <legend>About you</legend>
+
             <p>
               <label for="full-name">Full name</label>
               <input type="text" id="full-name" name="fullName" required />
             </p>
+
             <p>
               <label for="email">Email address</label>
               <input type="email" id="email" name="email" required />
             </p>
+
             <p>
               <label for="age">Your age (adopters must be 18 or older)</label>
               <input
@@ -126,15 +140,18 @@
                 required
               />
             </p>
+
             <p>
-              <label for="password"
-                >Choose a password for your adopter account</label
-              >
+              <label for="password">
+                Choose a password for your adopter account
+              </label>
               <input type="password" id="password" name="password" required />
             </p>
           </fieldset>
+
           <fieldset>
             <legend>Your new friend</legend>
+
             <p>
               <label for="pet-choice">Which pet are you interested in?</label>
               <select id="pet-choice" name="pet" required>
@@ -146,11 +163,13 @@
                 <option value="undecided">I am not sure yet</option>
               </select>
             </p>
+
             <p>
               <label for="visit-date">Preferred home-visit date</label>
               <input type="date" id="visit-date" name="visitDate" />
             </p>
           </fieldset>
+
           <p>
             <label for="reason">Why would you be a great match?</label>
             <textarea
@@ -161,6 +180,7 @@
               placeholder="e.g., I work from home and love long walks"
             ></textarea>
           </p>
+
           <p>
             <input
               type="checkbox"
@@ -173,6 +193,7 @@
               I agree to a home visit before the adoption is finalized
             </label>
           </p>
+
           <button type="submit" class="btn">Send application</button>
         </form>
       </section>

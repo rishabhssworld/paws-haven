@@ -3,12 +3,17 @@
 }
 
 :root {
-  --color-bg: #fbf7f0; /* was #f5f5f5 */
-  --color-primary: #1d6f6a; /* was #222222 */
-  --color-accent: #b5470f; /* was #2e5395 */
-  --color-accent-dark: #8f3809; /* was #1f3a6b */
-  --color-border: #e3dccd; /* was #cccccc */
-  --color-text: #2a2a2a; /* was #222222 */
+  --spacing-unit: 1rem;
+  --radius: 0.5rem;
+
+  --color-bg: #fbf7f0;
+  --color-surface: #ffffff;
+  --color-primary: #1d6f6a;
+  --color-accent: #b5470f;
+  --color-accent-dark: #8f3809;
+  --color-border: #e3dccd;
+  --color-text: #2a2a2a;
+
   --font-heading: "Fredoka", "Trebuchet MS", sans-serif;
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
@@ -17,7 +22,7 @@ body {
   margin: 0;
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-size: var(--spacing-unit);
+  font-size: 1rem;
   line-height: 1.6;
   font-family: var(--font-body);
 }
@@ -25,26 +30,27 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  h1,
-  h2,
-  h3 {
-    margin: 0 0 0.75rem;
-    font-family: var(--font-heading);
-    line-height: 1.2;
-    color: var(--color-primary);
-  }
+}
 
-  h1 {
-    font-size: 2rem;
-  }
+h1,
+h2,
+h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--color-primary);
+}
 
-  h2 {
-    font-size: 1.5rem;
-  }
+h1 {
+  font-size: 2rem;
+}
 
-  h3 {
-    font-size: 1.25rem;
-  }
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 header {
@@ -127,13 +133,32 @@ textarea {
   gap: 2rem;
 }
 
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: 0;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card {
+  padding: var(--spacing-unit);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
 @media (min-width: 768px) {
   header,
   main,
   footer {
     padding-left: 2rem;
     padding-right: 2rem;
-    text-color: var(--color-bg);
+    color: var(--color-text);
   }
 
   h1 {
@@ -154,23 +179,4 @@ textarea {
     grid-template-columns: 2fr 1fr;
     align-items: start;
   }
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
-  background-color: var(--color-accent);
-  color: #fff;
-  border: 0;
-  border-radius: var(--radius);
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.card {
-  padding: var(--spacing-unit);
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
 }
