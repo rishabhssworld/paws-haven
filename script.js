@@ -67,6 +67,7 @@ const noResults = document.querySelector("#no-results");
 //---------------------//
 
 function filterPets(searchText) {
+  console.log("filterPets was called with:", searchText);
   const search = searchText.trim().toLowerCase();
   let shown = 0;
 
