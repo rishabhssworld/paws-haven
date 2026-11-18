@@ -98,4 +98,53 @@ searchForm.addEventListener("submit", (event) => {
 });
 
 filterPets("");
+
+const taskList = document.querySelector("#task-list");
+const taskForm = document.querySelector("#checklist-form");
+const taskNameInput = document.querySelector("#task-name");
+const formMessage = document.querySelector("#form-message");
+
+function addTaskToPage(taskText) {
+  const item = document.createElement("li");
+  const label = document.createElement("label");
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  const text = document.createElement("span");
+  text.textContent = taskText;
+
+  checkbox.addEventListener("change", () => {
+    item.classList.toggle("done");
+  });
+
+  label.appendChild(checkbox);
+  label.appendChild(text);
+  item.appendChild(label);
+  taskList.appendChild(item);
+}
+
+const startingTasks = [
+  "Set up the folding tables",
+  "Print the adoption forms",
+  "Fill the water bowls",
+  "Check the microchip scanner",
+];
+
+for (const task of startingTasks) {
+  addTaskToPage(task);
+}
+
+taskForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const taskName = taskNameInput.value.trim();
+
+  if (taskName === "") {
+    formMessage.textContent = "Please type a job first.";
+    return;
+  }
+
+  formMessage.textContent = "";
+  addTaskToPage(taskName);
+  taskNameInput.value = "";
+  taskNameInput.focus();
+});
 //---------------------//
