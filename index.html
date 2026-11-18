@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Northern Paws Rescue — Adoption Day</title>
-    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&amp;family=Inter:wght@400;600&amp;display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
-
   <body>
     <header>
-      <img src="images/logo.png" alt="Northern Paws Rescue Logo" />
+      <img src="images/logo.png" alt="Northern Paws Rescue logo" />
       <nav>
         <a href="index.html" class="active">Home</a>
-        <a href="#pets" class="btn">Meet the pets</a>
+        <a href="#pets">Meet the pets</a>
         <a href="#apply">Apply</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -32,59 +32,69 @@
           <strong>10 a.m. this Saturday</strong>. Four animals are waiting for a
           home, and <em>every one</em> of them is ready to meet you.
         </p>
-        <a href="#pets">Meet the pets</a>
+        <a href="#pets" class="btn">Meet the pets</a>
       </section>
 
       <div class="showcase">
         <section id="pets">
           <h2>Meet the pets</h2>
-
           <form action="index.html#pets" method="get">
             <label for="pet-search">Search by name</label>
             <input type="text" id="pet-search" name="q" />
             <button type="submit" class="btn">Search</button>
           </form>
-
-          <img src="images/paw-divider.png" alt="Paw print divider" />
-
+          <p id="pet-count"></p>
+          <p id="no-results" class="hidden">
+            No pets match that name. Try “Mochi” or “Pepper”.
+          </p>
+          <img src="images/paw-divider.png" alt="" />
           <ul class="pet-list">
             <li>
               <article class="card">
                 <h3>Biscuit</h3>
-                <img src="images/biscuit.png" alt="Biscuit, a friendly dog" />
+                <img
+                  src="images/biscuit.png"
+                  alt="Biscuit, a golden dog with floppy ears, smiling beside a red ball"
+                />
                 <p>
                   Dog · 3 years · Loves fetch, belly rubs, and anyone holding a
                   snack.
                 </p>
               </article>
             </li>
-
             <li>
               <article class="card">
                 <h3>Mochi</h3>
-                <img src="images/mochi.png" alt="Mochi, a curious cat" />
+                <img
+                  src="images/mochi.png"
+                  alt="Mochi, a white cat with an orange patch over one ear and green eyes"
+                />
                 <p>
                   Cat · 2 years · Professional napper with strong opinions about
                   sunbeams.
                 </p>
               </article>
             </li>
-
             <li>
               <article class="card">
                 <h3>Clover</h3>
-                <img src="images/clover.png" alt="Clover, a playful rabbit" />
+                <img
+                  src="images/clover.png"
+                  alt="Clover, a gray rabbit with tall ears sitting beside a green clover leaf"
+                />
                 <p>
                   Rabbit · 1 year · Does a happy mid-air flip (called a binky)
                   whenever someone new walks in.
                 </p>
               </article>
             </li>
-
             <li>
               <article class="card">
                 <h3>Pepper</h3>
-                <img src="images/pepper.png" alt="Pepper, a talkative parrot" />
+                <img
+                  src="images/pepper.png"
+                  alt="Pepper, a green parrot with an orange beak perched on a branch"
+                />
                 <p>
                   Parrot · 6 years · Knows eleven words. Three of them are
                   "treat."
@@ -98,7 +108,7 @@
           <h2>Pet of the Week</h2>
           <img
             src="images/biscuit.png"
-            alt="Biscuit, a puppy with a golden ball"
+            alt="Biscuit grinning happily, his red ball right beside him"
           />
           <p>
             Biscuit has now waited <strong>47 days</strong> for his forever
@@ -108,27 +118,40 @@
         </aside>
       </div>
 
+      <section id="checklist-section">
+        <h2>Adoption Day checklist</h2>
+        <p>Volunteers: add a job, then tick it off when it is done.</p>
+        <form id="checklist-form">
+          <label for="task-name">New job</label>
+          <input
+            type="text"
+            id="task-name"
+            name="taskName"
+            placeholder="e.g., Set up the folding tables"
+          />
+          <button type="submit" class="btn">Add job</button>
+        </form>
+        <p id="form-message" class="error"></p>
+        <ul id="task-list"></ul>
+      </section>
+
       <section id="apply">
         <h2>Adoption application</h2>
         <p>
           Tell us a little about yourself and the pet you have your eye on. A
           volunteer will be in touch within three days.
         </p>
-
         <form action="/applications" method="post">
           <fieldset>
             <legend>About you</legend>
-
             <p>
               <label for="full-name">Full name</label>
               <input type="text" id="full-name" name="fullName" required />
             </p>
-
             <p>
               <label for="email">Email address</label>
               <input type="email" id="email" name="email" required />
             </p>
-
             <p>
               <label for="age">Your age (adopters must be 18 or older)</label>
               <input
@@ -140,18 +163,15 @@
                 required
               />
             </p>
-
             <p>
-              <label for="password">
-                Choose a password for your adopter account
-              </label>
+              <label for="password"
+                >Choose a password for your adopter account</label
+              >
               <input type="password" id="password" name="password" required />
             </p>
           </fieldset>
-
           <fieldset>
             <legend>Your new friend</legend>
-
             <p>
               <label for="pet-choice">Which pet are you interested in?</label>
               <select id="pet-choice" name="pet" required>
@@ -163,13 +183,67 @@
                 <option value="undecided">I am not sure yet</option>
               </select>
             </p>
-
             <p>
               <label for="visit-date">Preferred home-visit date</label>
               <input type="date" id="visit-date" name="visitDate" />
             </p>
           </fieldset>
-
+          <fieldset>
+            <legend>Where would your pet live?</legend>
+            <p>
+              <input
+                type="radio"
+                id="home-house"
+                name="homeType"
+                value="house"
+                required
+              />
+              <label for="home-house">House</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                id="home-apartment"
+                name="homeType"
+                value="apartment"
+              />
+              <label for="home-apartment">Apartment or condo</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                id="home-other"
+                name="homeType"
+                value="other"
+              />
+              <label for="home-other">Something else</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Your household (check all that apply)</legend>
+            <p>
+              <input type="checkbox" id="has-yard" name="hasYard" value="yes" />
+              <label for="has-yard">I have a fenced yard</label>
+            </p>
+            <p>
+              <input
+                type="checkbox"
+                id="has-pets"
+                name="hasOtherPets"
+                value="yes"
+              />
+              <label for="has-pets">I already have other pets</label>
+            </p>
+            <p>
+              <input
+                type="checkbox"
+                id="has-kids"
+                name="hasYoungKids"
+                value="yes"
+              />
+              <label for="has-kids">I have children under 12</label>
+            </p>
+          </fieldset>
           <p>
             <label for="reason">Why would you be a great match?</label>
             <textarea
@@ -180,7 +254,6 @@
               placeholder="e.g., I work from home and love long walks"
             ></textarea>
           </p>
-
           <p>
             <input
               type="checkbox"
@@ -189,11 +262,10 @@
               value="yes"
               required
             />
-            <label for="agree">
-              I agree to a home visit before the adoption is finalized
-            </label>
+            <label for="agree"
+              >I agree to a home visit before the adoption is finalized</label
+            >
           </p>
-
           <button type="submit" class="btn">Send application</button>
         </form>
       </section>

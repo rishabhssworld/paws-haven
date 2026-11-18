@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saturday Shift Board — Northern Paws Rescue</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="shift-board.js"></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Northern Paws Rescue logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="faq.html">FAQ</a>
+      <a href="shift-board.html" class="active">Shift board</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="shifts">
+      <h1>Saturday shift board</h1>
+      <p>Volunteers: type your name to claim a spot for Adoption Day. Every spot you claim appears in the list below.</p>
+      <form id="shift-form">
+        <label for="volunteer-name">Your name</label>
+        <input type="text" id="volunteer-name" name="volunteerName">
+        <button type="submit" class="btn">Sign me up</button>
+      </form>
+      <p id="shift-message" class="error"></p>
+      <p id="signup-count">0 volunteers signed up</p>
+      <ul id="shift-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Northern Paws Rescue, Sudbury, Ontario.</p>
+  </footer>
+</body>
+</html>
