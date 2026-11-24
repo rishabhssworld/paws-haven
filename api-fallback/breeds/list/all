@@ -1,0 +1,15 @@
+{
+  "message": {
+    "beagle": [],
+    "boxer": [],
+    "husky": [],
+    "labrador": [],
+    "poodle": [
+      "miniature",
+      "standard",
+      "toy"
+    ],
+    "pug": []
+  },
+  "status": "success"
+}

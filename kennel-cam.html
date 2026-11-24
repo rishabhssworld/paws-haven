@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennel Cam — Northern Paws Rescue</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="kennel-cam.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Northern Paws Rescue logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="faq.html">FAQ</a>
+      <a href="kennel-cam.html" class="active">Kennel cam</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="cam">
+      <h1>Kennel cam</h1>
+      <p>Type a dog breed, such as <strong>beagle</strong> or <strong>husky</strong>, and the kennel cam will fetch a photo.</p>
+      <form id="cam-form">
+        <label for="breed-input">Breed</label>
+        <input type="text" id="breed-input" name="breed">
+        <button type="submit" class="btn">Fetch photo</button>
+      </form>
+      <p id="cam-status"></p>
+      <img id="cam-photo" class="hidden" src="images/paw-divider.png" alt="">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Northern Paws Rescue, Sudbury, Ontario.</p>
+  </footer>
+</body>
+</html>

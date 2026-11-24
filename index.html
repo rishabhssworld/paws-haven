@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <script src="dogs.js" defer></script>
   </head>
   <body>
     <header>
@@ -133,6 +134,31 @@
         </form>
         <p id="form-message" class="error"></p>
         <ul id="task-list"></ul>
+      </section>
+
+      <section id="dogs">
+        <h2>Dog photos, just for fun</h2>
+        <p>
+          These photos come from a free public website (dog.ceo). They are not
+          our adoptable pets, but they are very good dogs.
+        </p>
+        <p>
+          <button type="button" id="dog-button" class="btn">
+            Show me a dog
+          </button>
+        </p>
+        <p>
+          <label for="breed-select">Or pick a breed</label>
+          <select id="breed-select" name="breed">
+            <option value="">-- Choose a breed --</option>
+          </select>
+        </p>
+        <p id="dog-status"></p>
+        <p id="dog-error" class="error"></p>
+        <figure id="dog-figure" class="hidden">
+          <img id="dog-photo" src="images/paw-divider.png" alt="" />
+          <figcaption id="dog-caption"></figcaption>
+        </figure>
       </section>
 
       <section id="apply">
