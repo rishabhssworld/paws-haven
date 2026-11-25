@@ -8,16 +8,21 @@ const breedInput = document.querySelector("#breed-input");
 const camStatus = document.querySelector("#cam-status");
 const camPhoto = document.querySelector("#cam-photo");
 
-function loadPhoto(breed) {
+async function loadPhoto(breed) {
   camStatus.textContent = "Loading…";
   try {
-    const response = fetch(apiUrl + "/breed/" + breed + "/images/random");
-    const data = response.json();
-    camPhoto.src = data.url;
+    const response = await fetch(apiUrl + "/breed/" + breed + "/images/random");
+    if (!response.ok) {
+      throw new Error("Breed not found");
+    }
+    const data = await response.json();
+    camPhoto.src = data.message;
     camPhoto.alt = "A random " + breed;
     camPhoto.classList.remove("hidden");
     camStatus.textContent = "";
   } catch (error) {
+    console.error("Kennel Cam error:", error);
+    camStatus.textContent = "Could not load the dog photo. Please try again.";
   }
 }
 
